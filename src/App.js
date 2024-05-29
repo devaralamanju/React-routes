@@ -14,7 +14,7 @@ function Header(){
     <>
       <ul className='nav'>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
+        <li><Link to="/about/10?posts=5&category=admin">About</Link></li>
         <li><Link to="/contact">Contact Us</Link></li>
         <li><Link to="/login">Login</Link></li>
         <li><Link to="/user">User</Link></li>
@@ -32,8 +32,8 @@ function App() {
     <Routes>
       <Route exact path="/" element={<Home/>} />
       <Route path="/login" element={<Login/>} />
-      <Route path="/about" element={<About/>} />
-      <Route path="/contact" element={<ContactUs/>} />
+      <Route path="/about/:id" element={<About/>} />
+      <Route path="/contact/:id/:name" element={<ContactUs/>} />
       <Route path="/user" element={<User/>}>
         <Route path="orders" element={<Orders/>} />
         <Route path="Profile" element={<Profile/>} />
